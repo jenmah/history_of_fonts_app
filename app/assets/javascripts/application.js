@@ -14,3 +14,20 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+// declare varliables:
+
+$(document).ready(function() {
+
+  $('#search-bar').keypress(function(event) {
+    if (event.which == 13) {
+      event.preventDefault();
+      var search = $('#search-bar').val();
+      console.log(search);
+      
+    }
+  })
+
+});
+

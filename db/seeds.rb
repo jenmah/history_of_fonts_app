@@ -24,6 +24,10 @@ bodoni = Font.create(font_name: "Bodoni", year_released: 1798, classification: "
 
 playfair_display = Font.create(font_name: "Playfair Display", year_released: 1111, classification: "serif", history: "Playfair is a transitional design. From the time of enlightenment in the late 18th century, the broad nib quills were replaced by pointed steel pens. This influenced typographical letterforms to become increasingly detached from the written ones. Developments in printing technology, ink, and paper making, made it possible to print letterforms of high contrast and delicate hairlines.")
 
+roboto = Font.create(font_name: "Roboto", year_released: 2011, classification: "sans-serif", history: "Roboto has a dual nature. It has a mechanical skeleton and the forms are largely geometric. At the same time, the font features friendly and open curves. While some grotesks distort their letterforms to force a rigid rhythm, Roboto doesn’t compromise, allowing letters to be settle in to their natural width. This makes for a more natural reading rhythm more commonly found in humanist and serif types.")
+
+times_new_roman = Font.create(font_name: "Times New Roman", year_released: 1931, classification: "serif", history: "Times New Roman is a serif typeface commissioned by the British newspaper The Times in 1931, created by Victor Lardent at the English branch of Monotype.[1] It was commissioned after Stanley Morison had written an article criticizing The Times for being badly printed and typographically antiquated.")
+
 
 # Combination Objects:
 c1 = Combination.create(name: 'JosefinSansAndMerriweather', description: "Josefin Sans works well as the header. Blah blah blah")
