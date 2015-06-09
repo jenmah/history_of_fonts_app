@@ -5,6 +5,58 @@
     text-align: center;
     li {
       display: inline-block;
+      color: white;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 500;
+      letter-spacing: 1px;
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      a:active {
+        text-decoration: none;
+      }
     }
   }
 }
+
+input {
+  width: 15%;
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  outline: none;
+}
+
+
+#footer-container {
+  border-top: 1px solid grey;
+}
+
+
+#dynamic-area {
+  width:100%;
+  padding-top: 70px;
+  z-index:5;
+  // overflow:auto;
+}
+
+
+#navigation-container {
+    width:100%;
+    position:fixed;
+    z-index:10;
+    background:inherit;
+    background-color: #404040;
+}
+
+#footer-container {
+   position:fixed;
+   left: 0px;
+   bottom: 0px;
+   height: 120px;
+   width: 100%;
+   background-color: white;
+}
+
+

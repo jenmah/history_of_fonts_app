@@ -4,4 +4,9 @@ class FontsController < ApplicationController
     @fonts = Font.all
   end
 
+  def show
+    @font = Font.find(params[:id])
+    @combination = Combination.all
+  end
+
 end

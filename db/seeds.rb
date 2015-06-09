@@ -8,7 +8,7 @@
 
 Combination.delete_all
 Font.delete_all
-Combinations_font.delete_all
+CombinationFont.delete_all
 
 
 # Font Objects:
@@ -20,6 +20,25 @@ josefin_sans = Font.create(font_name: "Josefin Sans", year_released: 2014, class
 
 merriweather = Font.create(font_name: "Merriweather", year_released: 2013, classification: "serif", history: "Merriweather was designed to be a text face that is pleasant to read on screens. Merriweather is an evolving project and will be updated. As of now there are 4 styles: Regular, Light, Bold, and Black. There are now Italic styles in each of these weights, too.")
 
+bodoni = Font.create(font_name: "Bodoni", year_released: 1798, classification: "serif", history: "Bodoni is a series of serif typefaces first designed by Giambattista Bodoni (1740–1813) in 1798. Bodoni followed the ideas of John Baskerville, as found in the printing type Baskerville: increased stroke contrast and a more vertical, slightly condensed, upper case; but took them to a more extreme conclusion. Bodoni had a long career and his designs evolved and varied, ending with a typeface of narrower underlying structure with flat, unbracketed serifs, extreme contrast between thick and thin strokes, and an overall geometric construction.")
+
+
+
+
 # Combination Objects:
-c1 = Combination.create(name: 'JosefinSansAndMerriweather', description: "Josefun Sans works well as the header. Blah blah blah")
+c1 = Combination.create(name: 'JosefinSansAndMerriweather', description: "Josefin Sans works well as the header. Blah blah blah")
+
+c2 = Combination.create(name: 'JosefinSansAndBodoni', description: "Use Bodoni as the header in bold, and a light version of Josefin as the body")
+
+
+# Assign fonts to combinations
+c1.fonts << merriweather
+c1.fonts << josefin_sans
+
+c2.fonts << josefin_sans
+c2.fonts << bodoni
+
+
+
+puts "seeded"
 
