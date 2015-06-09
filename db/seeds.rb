@@ -22,7 +22,7 @@ merriweather = Font.create(font_name: "Merriweather", year_released: 2013, class
 
 bodoni = Font.create(font_name: "Bodoni", year_released: 1798, classification: "serif", history: "Bodoni is a series of serif typefaces first designed by Giambattista Bodoni (1740–1813) in 1798. Bodoni followed the ideas of John Baskerville, as found in the printing type Baskerville: increased stroke contrast and a more vertical, slightly condensed, upper case; but took them to a more extreme conclusion. Bodoni had a long career and his designs evolved and varied, ending with a typeface of narrower underlying structure with flat, unbracketed serifs, extreme contrast between thick and thin strokes, and an overall geometric construction.")
 
-
+playfair_display = Font.create(font_name: "Playfair Display", year_released: 1111, classification: "serif", history: "Playfair is a transitional design. From the time of enlightenment in the late 18th century, the broad nib quills were replaced by pointed steel pens. This influenced typographical letterforms to become increasingly detached from the written ones. Developments in printing technology, ink, and paper making, made it possible to print letterforms of high contrast and delicate hairlines.")
 
 
 # Combination Objects:

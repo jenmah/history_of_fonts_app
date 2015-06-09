@@ -5,8 +5,9 @@ class FontsController < ApplicationController
   end
 
   def show
+    @fonts = Font.all
     @font = Font.find(params[:id])
-    @combination = Combination.all
+    @combinations = Combination.all
   end
 
 end

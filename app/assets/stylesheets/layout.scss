@@ -1,5 +1,5 @@
 #navigation-container {
-  height: 45px;
+  height: 35px;
   border-bottom: 1px solid grey;
   nav {
     text-align: center;
@@ -20,14 +20,35 @@
   }
 }
 
+#nav-left {
+  display: inline-block;
+  padding-right: 50%;
+  // border: 1px solid red;
+}
+
+#nav-right {
+  display: inline-block;
+  padding-right: 7%;
+  // border: 1px solid red;
+}
+
 input {
-  width: 15%;
+  width: 130%;
   border: none;
   border-bottom: 1px solid white;
   background-color: transparent;
   outline: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  color: white;
+  font-size: 14px;
+  display: inline-block;
 }
 
+.fa {
+  color: white;
+  display: inline-block;
+}
 
 #footer-container {
   border-top: 1px solid grey;
@@ -35,7 +56,8 @@ input {
 
 
 #dynamic-area {
-  width:100%;
+  // width:100%;
+  margin: 0% 10% 12% 10%;
   padding-top: 70px;
   z-index:5;
   // overflow:auto;
@@ -48,6 +70,7 @@ input {
     z-index:10;
     background:inherit;
     background-color: #404040;
+    padding-top: 1%;
 }
 
 #footer-container {
@@ -56,7 +79,21 @@ input {
    bottom: 0px;
    height: 120px;
    width: 100%;
-   background-color: white;
+   background-color: #404040;
+    a {
+      text-decoration: none;
+      color: white;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 100;
+      margin: 0 2%;
+      font-size: 12px;
+    a:active {
+      text-decoration: none;
+    }
+  }
 }
 
-
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}

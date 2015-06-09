@@ -1,19 +1,28 @@
-<h1><%= @font.font_name %></h1>
-  <h3><%= @font.year_released %></h3>
-  <h3><%= @font.classification %></h3>
-    <p><%= @font.history %></p>
+<h1><span style="font-family: '<%= @font.font_name %>';"><%= @font.font_name %></span></h1>
+
+  <h3><span style="font-family: '<%= @font.font_name %>';"><%= @font.year_released %></span></h3>
+  <h3><span style="font-family: '<%= @font.font_name %>';"><%= @font.classification %></span></h3>
+  <p><span style="font-family: '<%= @font.font_name %>';"><%= @font.history %></span></p>
 
 
-<h4>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</h4>
-<h4>a b c d e f g h i j k l m n o p q r s t u v</h4>
-<h4>! @ # $ % ^ & * ( ) _ + =</h4>
+<h4><span style="font-family: '<%= @font.font_name %>';">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</span></h4>
+<h4><span style="font-family: '<%= @font.font_name %>';">a b c d e f g h i j k l m n o p q r s t u v</span></h4>
+<h4><span style="font-family: '<%= @font.font_name %>';"><h4>! @ # $ % ^ & * ( ) _ + =</span></h4>
 
 
-<h3>try it out yourself</h3>
+<h5>try it out yourself. type whatever you want below</h5>
 <input class="test" type="text" placeholder="the quick brown fox jumps over the lazy dog"></input>
 
 <div class="combination-cards">
-  <div id="combo-card">
-    <%= @combination.first %>
-  </div>
+
+  <% @combinations.each do |combo| %>
+    <div id="combo-card">
+      <% combo.fonts.each do |font| %> <!-- this is an array -->
+      <%= font.font_name %>
+      <% end %>
+    </div>
+  <% end %>
 </div>
+
+
+

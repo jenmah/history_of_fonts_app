@@ -6,8 +6,10 @@
 #combo-card {
   width: 25%;
   height: 250px;
-  border: 1px solid red;
+  border: 1px solid #404040;
+  border-top: 5px solid #404040;
   margin: 2%;
+  display: inline-block;
 }
 
 
@@ -16,4 +18,5 @@
   border-bottom: 1px solid grey;
   width: 40%;
   outline: 0;
+  color: black;
 }
