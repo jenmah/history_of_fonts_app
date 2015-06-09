@@ -21,3 +21,33 @@
   outline: 0;
   color: black;
 }
+
+h2 {
+  font-size: 12px;
+  font-family: 'Raleway';
+  font-weight: 500;
+  margin: 0 0;
+  letter-spacing: 2px;
+  color: rgba(180, 180, 180, 1);
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 35px;
+  margin: 0 0;
+}
+
+h5 {
+  font-size: 170px;
+  color: rgba(215, 215, 215, 1);
+}
+
+#font-information {
+  width: 40%;
+  display: inline-block;
+}
+
+#capital-box {
+  width: 40%;
+  display: inline-block;
+}

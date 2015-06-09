@@ -1,0 +1,163 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,700);
+
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+// Sample styles
+
+.timeline {
+  margin-top: 2em;
+}
+
+
+// Timeline
+// -----------------------------------
+
+// Variables
+
+$timeline__color: black;
+$timeline__itemWidth: 8;
+$timeline__itemPadding: 1;
+$timeline__itemDot: .4375;
+$timeline__topDotWidth: 2.0625;
+$timeline__topDotShine: .25;
+$timeline__bottomtDotWidth: .6875;
+
+// Container
+
+.timeline > ul {
+  display: inline-block;
+  position: relative;
+  // Nudge the whole thing into the middle
+  left: 50%;
+  border-left: 1px solid $timeline__color;
+  // Negate before-dots' height
+  margin-top: ($timeline__topDotWidth + $timeline__topDotShine )+ em;
+  // Add a top-padding to match bottom margin
+  padding: 0;
+  padding-top: ($timeline__itemWidth/2) + em;
+  color: $timeline__color;
+
+  // Add dots to top & bottom
+  &:before,
+  &:after {
+    content:"";
+    background: $timeline__color;
+    border-radius: 100%;
+    display: block;
+    position: absolute;
+  }
+  &:before {
+    left:  -($timeline__topDotWidth/2) + em;
+    top:   -$timeline__topDotWidth + em;
+    width:  $timeline__topDotWidth + em;
+    height: $timeline__topDotWidth + em;
+    box-shadow: 0 0 0 $timeline__topDotShine + em rgba(#eee,0.3);
+  }
+  &:after {
+    bottom: -$timeline__bottomtDotWidth + em;
+    left:   -($timeline__bottomtDotWidth/2) + em;
+    width:   $timeline__bottomtDotWidth + em;
+    height:  $timeline__bottomtDotWidth + em;
+  }
+}
+
+// Timeline items
+
+.timeline li {
+  position: relative;
+  width: $timeline__itemWidth +em;
+  // Ditch the list for before-element
+  list-style: none;
+  // Space for the connectin line
+  margin: 0 0 ($timeline__itemWidth/2) + em $timeline__itemWidth +em;
+  padding: 0;
+  padding-left: $timeline__itemPadding + em;
+  &:before,
+  &:after {
+    content:"";
+    background: $timeline__color;
+    display: block;
+    position: absolute;
+  }
+  &:before {
+    left: -$timeline__itemWidth +em;
+    top: 50%;
+    width: $timeline__itemWidth +em;
+    height: 1px;
+  }
+  &:after {
+    left: -$timeline__itemWidth - $timeline__itemDot / 2 +em;
+    top: 50%;
+    transform: translateY(-50%);
+    height: $timeline__itemDot + em;
+    width: $timeline__itemDot + em;
+    border-radius: 100%;
+  }
+}
+
+.timeline li p {
+  margin: 0;
+}
+
+.timeline__date {
+  font-weight: 700;
+  margin-bottom: .25em;
+}
+
+// Item # modifiers
+
+.timeline li {
+    &:nth-child(2n) {
+    left: -($timeline__itemWidth*2)-$timeline__itemPadding +em;
+    margin-left:0;
+    padding-left: 0;
+    text-align: right;
+    &:before {
+      left: ($timeline__itemWidth + $timeline__itemPadding) +em;
+    }
+    &:after {
+      left: ($timeline__itemWidth*2 + $timeline__itemPadding  - $timeline__itemDot/2) +em;
+      top: 50%;
+    }
+  }
+  &:last-child {
+    margin-bottom: ($timeline__itemWidth/2) + em;
+  }
+}
+
+
+// JS-states
+
+.js .timeline li { 
+  p,
+  &:after {
+    opacity: 0;
+  }
+  &:before {
+    width: 0;
+  }
+}
+
+.js .timeline .timeline--active {
+  p {
+  opacity: 1;
+  transition: opacity .5s .5s ease-in;
+  }
+  &:before {
+    width: $timeline__itemWidth +em;
+    transition: width 0.5s .25s ease-in;
+  }
+  &:after {
+    opacity: 1;
+    transition: opacity 0.25s ease-in;
+  }
+}

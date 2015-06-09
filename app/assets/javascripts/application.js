@@ -25,9 +25,13 @@ $(document).ready(function() {
       event.preventDefault();
       var search = $('#search-bar').val();
       console.log(search);
-      
     }
   })
+
+//   $('a.top').click(function(){
+//     $(document.body).animate({scrollTop : 0},800);
+//     return false;
+// });
 
 });
 

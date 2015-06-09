@@ -8,6 +8,8 @@
   <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700,700italic,500italic,500,400italic,300italic,300,100,100italic,900italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -34,14 +36,34 @@
   <div class="push"></div>
   </div>
 
+<!-- <div class="horizontal">
+    <div class="table">
+        <article>
+            <h3>Project Title</h3>
+        </article>
+    </div>
+</div> -->
+
+
+
 
   <div id="footer-container">
     <footer>
-      <% @fonts.each do |font| %>
-        <%= link_to font.font_name, font_path(font) %>
-      <% end %>
+      <div class="horizontal">
+        <div class="table">
+          <article>
+          <hr>
+            <h3><% @fonts.each do |font| %>
+                <%= link_to font.font_name, font_path(font) %>
+            <% end %></h3>
+          </article>
+        </div>
+      </div>
     </footer>
-  </div>
+</div>
+
+
+
 
 </body>
 </html>

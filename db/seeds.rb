@@ -26,7 +26,11 @@ playfair_display = Font.create(font_name: "Playfair Display", year_released: 111
 
 roboto = Font.create(font_name: "Roboto", year_released: 2011, classification: "sans-serif", history: "Roboto has a dual nature. It has a mechanical skeleton and the forms are largely geometric. At the same time, the font features friendly and open curves. While some grotesks distort their letterforms to force a rigid rhythm, Roboto doesn’t compromise, allowing letters to be settle in to their natural width. This makes for a more natural reading rhythm more commonly found in humanist and serif types.")
 
-times_new_roman = Font.create(font_name: "Times New Roman", year_released: 1931, classification: "serif", history: "Times New Roman is a serif typeface commissioned by the British newspaper The Times in 1931, created by Victor Lardent at the English branch of Monotype.[1] It was commissioned after Stanley Morison had written an article criticizing The Times for being badly printed and typographically antiquated.")
+times_new_roman = Font.create(font_name: "Times New Roman", year_released: 1931, classification: "serif", history: "Times New Roman is a serif typeface commissioned by the British newspaper The Times in 1931, created by Victor Lardent at the English branch of Monotype. It was commissioned after Stanley Morison had written an article criticizing The Times for being badly printed and typographically antiquated.")
+
+comic_sans = Font.create(font_name: "Comic Sans MS", year_released: 1994, classification: "sans-serif", history: "Comic Sans is a sans-serif casual script typeface designed by Vincent Connare and released in 1994 by Microsoft Corporation. It is classified as a casual, non-connecting script for use in informal documents inspired by comic book lettering.")
+
+garamond = Font.create(font_name: "EB Garamond", year_released: 1952, classification: "serif", history: "Garamont’s fonts have set a milestone, on which font designers have been recurring ever since. EB Garamond is an open source project to create a revival of Claude Garamont’s famous humanist typeface from the mid-16th century. Its design reproduces the original design by Claude Garamont: The source for the letterforms is a scan of a specimen known as the “Berner specimen”, which, composed in 1592 by Conrad Berner, son-in-law of Christian Egenolff and his successor at the Egenolff print office, shows Garamont’s roman and Granjon’s italic fonts at different sizes. Hence the name of this project: Egenolff-Berner Garamond.")
 
 
 # Combination Objects:
