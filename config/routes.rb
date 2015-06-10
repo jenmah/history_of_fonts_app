@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   root 'fonts#index'
   resources :fonts
 
+  get '/search', to: 'search#index'
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

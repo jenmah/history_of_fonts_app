@@ -30,20 +30,19 @@
     </header>
   </div>
   <div id="dynamic-area">
+
+
+    <form class="font_search" id="font_search" action="/search" accept-charset="UTF-8" method="get">
+      <input type="search" name="q[font_name]" id="q_font_name" />
+    <input type="submit" name="commit" value="Search" />
+</form>
+
+
     <%= yield %>
   </div>
   
   <div class="push"></div>
   </div>
-
-<!-- <div class="horizontal">
-    <div class="table">
-        <article>
-            <h3>Project Title</h3>
-        </article>
-    </div>
-</div> -->
-
 
 
 
