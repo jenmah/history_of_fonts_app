@@ -24,20 +24,16 @@
         </div>
 
         <div id="nav-right">
-          <input id="search-bar" type="text" placeholder="search for a font"></input>
+<!--           <input id="search-bar" type="text" placeholder="search for a font"></input> -->
+    <form class="font_search" id="font_search" action="/search" accept-charset="UTF-8" method="get">
+      <input type="search" name="q[font_name]" id="q_font_name" />
+      <input type="submit" name="commit" value="Search" />
+    </form>
         </div>
       </nav>
     </header>
   </div>
   <div id="dynamic-area">
-
-
-    <form class="font_search" id="font_search" action="/search" accept-charset="UTF-8" method="get">
-      <input type="search" name="q[font_name]" id="q_font_name" />
-    <input type="submit" name="commit" value="Search" />
-</form>
-
-
     <%= yield %>
   </div>
   

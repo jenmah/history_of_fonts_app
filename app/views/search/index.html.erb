@@ -1,3 +1,10 @@
 <h1>search page</h1>
 
-<%= @search_results.first.font_name %>
+
+<% if @search_results.present? %>
+  <%= @search_results.first.font_name %>
+<% elsif %>
+  <%= "sorry, that font isn't in our database." %>
+  <%= "would you like to recommend a font?" %>
+    
+<% end %>
