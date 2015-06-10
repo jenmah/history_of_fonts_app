@@ -2,7 +2,6 @@
 
 
 <% if @search_results.present? %>
-  <%= @search_results.first.font_name %>
   <%= link_to @search_results.first.font_name, font_path(@search_results.first.id) %>
 <% elsif %>
   <%= "sorry, that font isn't in our database." %>

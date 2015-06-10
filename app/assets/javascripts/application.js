@@ -82,5 +82,11 @@ $(document).ready(function() {
 
   $('body').delegate('.delete-suggestion-box', 'click', deleteSuggestion);
 
+  $("a[href='#top']").click(function() {
+     $("html, body").animate({ scrollTop: 0 }, "slow");
+     return false;
+  });
+  
+
 });
 
