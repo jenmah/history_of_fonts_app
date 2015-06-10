@@ -33,10 +33,11 @@
       <% combo.fonts.each do |font| %> <!-- this is an array -->
       <%= font.font_name %>
       <% end %>
+      <span style="font-family: '<%= @font.font_name %>';"><h4></span>
     </div>
   <% end %>
-</div>
 
-<!-- <a class=”top” href=”#”>Back to top</a> -->
+
+</div><!-- closes combination-cards div -->
 
 

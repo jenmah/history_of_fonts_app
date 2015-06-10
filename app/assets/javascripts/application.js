@@ -49,9 +49,9 @@ $(document).ready(function() {
     console.log(suggestionReason);
 
     // censorSuggestions();
+    $('#suggestions-list').prepend("Thanks! Your font suggestion has been added to our database.");
 
     $('#suggestions-list').prepend(suggestedFont +  '  |  ' +suggestionReason + '<button class="suggestion-box">' + 'EDIT' + '</button>' + '<button class="suggestion-box">' + 'DELETE' + '</button>');
-
 
     $.ajax({
       type: 'POST',

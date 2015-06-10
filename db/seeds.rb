@@ -34,9 +34,13 @@ garamond = Font.create(font_name: "EB Garamond", year_released: 1952, classifica
 
 
 # Combination Objects:
-c1 = Combination.create(name: 'JosefinSansAndMerriweather', description: "Josefin Sans works well as the header. Blah blah blah")
+c1 = Combination.create(name: 'Josefin Sans & Merriweather', description: "Josefin Sans works well as the header. Blah blah blah")
 
-c2 = Combination.create(name: 'JosefinSansAndBodoni', description: "Use Bodoni as the header in bold, and a light version of Josefin as the body")
+c2 = Combination.create(name: 'Josefin Sans & Bodoni', description: "Use Bodoni as the header in bold, and a light version of Josefin as the body")
+
+c3 = Combination.create(name: 'Futura & Times New Roman', description: "Josefin Sans works well as the header. Blah blah blah")
+
+c4 = Combination.create(name: 'Playfair Display & Roboto', description: "Use a heavy version of Playfair Display for the headers, and a light version of Roboto as the body")
 
 
 # Assign fonts to combinations
@@ -46,6 +50,11 @@ c1.fonts << josefin_sans
 c2.fonts << josefin_sans
 c2.fonts << bodoni
 
+c3.fonts << futura
+c3.fonts << times_new_roman
+
+c4.fonts << playfair_display
+c4.fonts << roboto
 
 
 puts "seeded"
