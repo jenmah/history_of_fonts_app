@@ -16,20 +16,10 @@
 //= require_tree .
 
 
-// declare varliables:
 
 $(document).ready(function() {
 
-  // $('#search-bar').keypress(function(event) {
-  //   if (event.which == 13) {
-  //     event.preventDefault();
-  //     var search = $('#search-bar').val();
-  //     console.log(search);
-  //   }
-  // })
-
   // badWords = [shitty, shit, fuck]
-
 
   // function censorSuggestions() {
   //   suggestionArray = suggestedFont.split(' ');
@@ -51,7 +41,7 @@ $(document).ready(function() {
     // censorSuggestions();
     $('#suggestions-list').prepend("Thanks! Your font suggestion has been added to our database.");
 
-    $('#suggestions-list').prepend(suggestedFont +  '  |  ' +suggestionReason + '<button class="suggestion-box">' + 'EDIT' + '</button>' + '<button class="suggestion-box">' + 'DELETE' + '</button>');
+    $('#suggestions-list').prepend(suggestedFont +  '  |  ' +suggestionReason + '<button id="edit-suggestion-box">' + 'EDIT' + '</button>' + '<button class="delete-suggestion-box">' + 'DELETE' + '</button>');
 
     $.ajax({
       type: 'POST',
@@ -68,8 +58,29 @@ $(document).ready(function() {
     })
   }
 
+  function deleteSuggestion() {
+    console.log('deleteSuggestion');
+
+  //   $.ajax({
+  //     type: 'POST',
+  //     url: '/suggestions',
+  //     dataType: 'json',
+  //     data:  {
+  //       suggestion:
+  //       {suggested_font: suggestedFont, reason: suggestionReason}
+  //     }
+  //   }).done(function(suggestion) {
+  //     console.log(suggestion.suggested_font);
+  //     $('#suggested-font').val('');
+  //     $('#suggestion-reason').val('');
+  //   })
+  // }
+  }
+
+
   $('#submit-suggestion').on('click', addSuggestion);
 
+  $('body').delegate('.delete-suggestion-box', 'click', deleteSuggestion);
 
 });
 
