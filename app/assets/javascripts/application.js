@@ -20,18 +20,56 @@
 
 $(document).ready(function() {
 
-  $('#search-bar').keypress(function(event) {
-    if (event.which == 13) {
-      event.preventDefault();
-      var search = $('#search-bar').val();
-      console.log(search);
-    }
-  })
+  // $('#search-bar').keypress(function(event) {
+  //   if (event.which == 13) {
+  //     event.preventDefault();
+  //     var search = $('#search-bar').val();
+  //     console.log(search);
+  //   }
+  // })
 
-//   $('a.top').click(function(){
-//     $(document.body).animate({scrollTop : 0},800);
-//     return false;
-// });
+  // badWords = [shitty, shit, fuck]
+
+
+  // function censorSuggestions() {
+  //   suggestionArray = suggestedFont.split(' ');
+  //   suggestionReasonArray = suggestionReason.split(' ');
+  //     suggestionArray.each_with_index do |word, index|
+  //       if badWords.include?(word)
+  //         replacement = "*" * word.length
+  //         suggestionArray[index] = replacement
+  //     }
+
+
+  function addSuggestion() {
+    console.log('addSuggestion');
+    var suggestedFont = $('#suggested-font').val();
+    var suggestionReason = $('#suggestion-reason').val();
+    console.log(suggestedFont);
+    console.log(suggestionReason);
+
+    // censorSuggestions();
+
+    $('#suggestions-list').prepend(suggestedFont +  '  |  ' +suggestionReason + '<button class="suggestion-box">' + 'EDIT' + '</button>' + '<button class="suggestion-box">' + 'DELETE' + '</button>');
+
+
+    $.ajax({
+      type: 'POST',
+      url: '/suggestions',
+      dataType: 'json',
+      data:  {
+        suggestion:
+        {suggested_font: suggestedFont, reason: suggestionReason}
+      }
+    }).done(function(suggestion) {
+      console.log(suggestion.suggested_font);
+      $('#suggested-font').val('');
+      $('#suggestion-reason').val('');
+    })
+  }
+
+  $('#submit-suggestion').on('click', addSuggestion);
+
 
 });
 

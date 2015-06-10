@@ -3,8 +3,13 @@
 
 <% if @search_results.present? %>
   <%= @search_results.first.font_name %>
+  <%= link_to @search_results.first.font_name, font_path(@search_results.first.id) %>
 <% elsif %>
   <%= "sorry, that font isn't in our database." %>
   <%= "would you like to recommend a font?" %>
-    
+  <h2>SUGGEST A FONT</h2>
+  <input type="text" id="suggested-font" placeholder="enter a font name">
+  <input type="text" id="suggestion-reason" placeholder="why do you think this font should be added?">
+  <button id="submit-suggestion">submit suggestion</button>
+  <ul id="suggestions-list"></ul>
 <% end %>
