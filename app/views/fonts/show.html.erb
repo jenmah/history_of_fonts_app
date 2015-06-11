@@ -10,17 +10,17 @@
 </div>
 
 <div id="three-box-information">
-  <div class="three-box">
+  <div class="three-box" id="first-character-container">
     <h2>YEAR RELEASED</h2>
     <span style="font-family: '<%= @font.font_name %>';"><%= @font.year_released %></span>
   </div>
 
-  <div class="three-box">
+  <div class="three-box" id="middle-character-container">
     <h2>DESIGNED BY</h2>
     <span style="font-family: '<%= @font.font_name %>';"><%= @font.designed_by %></span>
   </div>
 
-  <div class="three-box">
+  <div class="three-box" id="third-character-container">
     <h2>INSPIRED BY</h2>
     <span style="font-family: '<%= @font.font_name %>';"><%= @font.inspired_by %></span>
   </div>
@@ -30,31 +30,36 @@
 
   <div id="characters-symbols">
     <h2>CHARACTERS & SYMBOLS</h2>
-    <span style="font-family: '<%= @font.font_name %>';">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</span>
-    <span style="font-family: '<%= @font.font_name %>';">a b c d e f g h i j k l m n o p q r s t u v</span>
-    <span style="font-family: '<%= @font.font_name %>';">! @ # $ % ^ & * ( ) _ + =</span>
+    <div class="inside-characters-symbols">
+      <span style="font-family: '<%= @font.font_name %>';">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</span>
+    </div>
+    <div class="inside-characters-symbols">
+      <span style="font-family: '<%= @font.font_name %>';">a b c d e f g h i j k l m n o p q r s t u v</span>
+    </div>
+    <div class="inside-characters-symbols">
+      <span style="font-family: '<%= @font.font_name %>';">! @ # $ % ^ & * ( ) _ + =</span>
+    </div>
   </div>
 
 
-<div id="grey-box">
-</div>
-
-  <h2>try it out yourself. type whatever you want below</h2>
-  <input class="test" type="text" placeholder="the quick brown fox jumps over the lazy dog"></input>
-
+  <div id="testing-font-div">
+    <h2>try it out yourself. type whatever you want below</h2>
+    <input class="test" type="text" placeholder="the quick brown fox jumps over the lazy dog"></input>
+  </div>
 
 <div class="combination-cards">
 
+  <h2>FONT COMBINATIONS FOR <%= @font.font_name %></h2>
   <% @combinations.each do |combo| %>
     <div id="combo-card">
   
-      <%= combo.fonts.first.font_name %>
-      &
-      <%= combo.fonts.last.font_name %>
-
+      <h2><%= combo.fonts.first.font_name %></h2>
+      <h2>&</h2>
+      <h2><%= combo.fonts.last.font_name %></h2>
+      <hr id="combo-hr">
       <span style="font-family: '<%= combo.fonts.first.font_name %>';">HEADER TEXT</span>
 
-      <span style="font-family: '<%= combo.fonts.last.font_name %>';">lorem ipsum text this is the body</span>
+      <span style="font-family: '<%= combo.fonts.last.font_name %>';">use <%= combo.fonts.first.font_name %> as the header, and a light version of <%= combo.fonts.last.font_name %> for the body text</span>
 
     </div>
   <% end %>

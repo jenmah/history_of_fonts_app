@@ -53,13 +53,20 @@
   position: fixed;
   width: 100%;
   z-index: 1;
-  padding: 1% 5%;
 }
 
 #back-to-top {
   text-align: center;
-  margin-top: 5%;
+  margin-top: 7%;
   margin-bottom: 15%;
+}
+
+#back-to-top a {
+  font-size: 15px;
+  font-family: 'Raleway';
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: rgba(50, 50, 50, 1);
 }
 
 .fa {
@@ -85,6 +92,9 @@ li {
   border: none;
   border-bottom: 1px solid white;
   color: white;
+  font-family: 'Raleway';
+  font-size: 14px;
+  width: 75%;
 }
 
 #nav-search {
@@ -92,7 +102,9 @@ li {
   border: none;
   color: white;
   font-family: 'Raleway';
-  font-size: 15px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  padding-top: 3%;
 }
 
 #search-in-nav {

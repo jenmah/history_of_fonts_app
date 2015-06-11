@@ -70,6 +70,8 @@ $(document).ready(function() {
     $('#suggested-font').val("testing");
     $('#suggestion-reason').val("testing");
 
+    $('#suggestions-list').html('Edit your suggestion above');
+
     $.ajax({
       type: 'GET',
       url: "/suggestions/" + editBoxId + "/edit",

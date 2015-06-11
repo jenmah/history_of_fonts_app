@@ -1,28 +1,11 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+My site is dedicated to fonts and their history. The site is split into two main sections, with a timeline about the evolution of typography on the left and displayed information on the right. 
 
-Things you may want to cover:
+The main navigation of the site is through the timeline, as users can click on the name of mentioned fonts to bring up their individual specs, such as the date they were released, who they were designed by, their influences, and suggested pairings for that font.
 
-* Ruby version
+The secondary navigational tool of the site is the search bar in the top right of the nav bar. I used a gem called Ransack to search through my Fonts model, so that users can search my site through font names. If the font they're searching for isn't part of my database, they have the ability to suggest a font, and a reason why they think it should be added.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+As my first major Rails project, I feel like this app forced me to learn a lot in a short period of time; I feel I have a much better grasp on the file structure and organization of Rails files, how versatile embedded Ruby tags can be, and am overall much more comfortable with understanding how different langauges can interact with each other.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
