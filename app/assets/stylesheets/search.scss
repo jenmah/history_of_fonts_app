@@ -1,11 +1,18 @@
-#edit-suggestion-box {
+.edit-suggestion-box {
+  width: 7%;
+  height: 10px;
+  font-size: 10px;
+  margin-right: 1%;
+}
+
+.delete-suggestion-box {
   width: 7%;
   height: 10px;
   font-size: 10px;
 }
 
-#delete-suggestion-box {
-  width: 7%;
-  height: 10px;
-  font-size: 10px;
+#search-page-div {
+  margin: 0 10%;
+  margin-top: 40%;
 }
+

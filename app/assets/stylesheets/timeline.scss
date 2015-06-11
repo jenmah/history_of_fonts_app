@@ -23,7 +23,7 @@ body {
 
 // Variables
 
-$timeline__color: black;
+$timeline__color: rgba(50, 50, 50, 1);
 $timeline__itemWidth: 8;
 $timeline__itemPadding: 1;
 $timeline__itemDot: .4375;
@@ -109,6 +109,8 @@ $timeline__bottomtDotWidth: .6875;
 }
 
 .timeline__date {
+  font-size: 17px;
+  font-family: 'Playfair Display', serif;
   font-weight: 700;
   margin-bottom: .25em;
 }

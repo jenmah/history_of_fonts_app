@@ -1,5 +1,4 @@
-<h1>search page</h1>
-
+<div id="search-page-div">
 
 <% if @search_results.present? %>
   <%= link_to @search_results.first.font_name, font_path(@search_results.first.id) %>
@@ -12,3 +11,5 @@
   <button id="submit-suggestion">submit suggestion</button>
   <ul id="suggestions-list"></ul>
 <% end %>
+
+</div>

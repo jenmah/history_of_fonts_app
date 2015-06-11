@@ -1,12 +1,15 @@
 #homepage {
   text-align: center;
+  margin-top: 18%;
 }
 
 h1 {
-  font-size: 85px;
+  font-size: 70px;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  margin: -2% 0 -1% 0;
+  line-height: 29%;
+  margin-top: 5%;
+  color: rgba(50, 50, 50, 1);
   }
 
 h2 {
@@ -15,13 +18,13 @@ h2 {
   font-weight: 500;
   margin: 0 0;
   letter-spacing: 2px;
-  color: rgba(180, 180, 180, 1);
+  color: rgba(150, 150, 150, 1);
 }
 
 p {
   margin: 0 0;
   font-family: 'Raleway';
-  font-size: 15.5px;
+  font-size: 15px;
   margin-top: 2%;
   line-height: 155%;
 }

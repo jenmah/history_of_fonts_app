@@ -15,6 +15,23 @@ class SuggestionsController < ApplicationController
     render json: @suggestion
   end
 
+  def destroy
+    @suggestion = Suggestion.find(params[:id])
+    @suggestion.destroy
+
+    respond_to do |format|
+      format.json {render json: { head: :no_content}}
+    end
+  end
+
+  def edit
+    @suggestion = Suggestion.find(params[:id])
+    render json: @suggestion
+  end
+
+  def update
+    @suggestion = Suggestion.find(params[:id])
+  end
 
   private
 
