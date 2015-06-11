@@ -30,9 +30,11 @@ times_new_roman = Font.create(font_name: "Times New Roman", year_released: 1931,
 
 comic_sans = Font.create(font_name: "Comic Sans MS", year_released: 1994, classification: "sans-serif", history: "Comic Sans is a sans-serif casual script typeface designed by Vincent Connare and released in 1994 by Microsoft Corporation. It is classified as a casual, non-connecting script for use in informal documents inspired by comic book lettering.")
 
-garamond = Font.create(font_name: "EB Garamond", year_released: 1952, classification: "serif", history: "Garamont’s fonts have set a milestone, on which font designers have been recurring ever since. EB Garamond is an open source project to create a revival of Claude Garamont’s famous humanist typeface from the mid-16th century. Its design reproduces the original design by Claude Garamont: The source for the letterforms is a scan of a specimen known as the “Berner specimen”, which, composed in 1592 by Conrad Berner, son-in-law of Christian Egenolff and his successor at the Egenolff print office, shows Garamont’s roman and Granjon’s italic fonts at different sizes. Hence the name of this project: Egenolff-Berner Garamond.")
+garamond = Font.create(font_name: "EB Garamond", year_released: 1952, classification: "serif", history: "Garamont’s fonts have set a milestone, on which font designers have been recurring ever since. EB Garamond is an open source project to create a revival of Claude Garamont’s famous humanist typeface from the mid-16th century. Its design reproduces the original design by Claude Garamont: The source for the letterforms is a scan of a specimen known as the “Berner specimen”, which, composed in 1592 by Conrad Berner, son-in-law of Christian Egenolff and his successor at the Egenolff print office, shows Garamont’s roman and Granjon’s italic fonts at different sizes. Hence the name of this project: Egenolff-Berner Garamond.", designed_by: 'Georg Duffner', inspired_by: 'Garamond')
 
 gill_sans = Font.create(font_name: "Gill Sans", year_released: 1926, classification: "sans-serif", history: "Gill Sans is a sans-serif typeface designed by Eric Gill. The original design appeared in 1926 when Douglas Cleverdon opened a bookshop in his home town of Bristol, where Gill painted the fascia over the window in sans-serif capitals that would later be known as Gill Sans. In addition, Gill had sketched a design for Cleverdon, intended as a guide for him to use for notices and announcements. Gill further developed it into a complete font family after Stanley Morison of Monotype commissioned the development of Gill Sans to compete with the sans-serif Erbar, Futura and Kabel families, which were being launched in Germany during the latter 1920s. Gill Sans was released in 1928 by Monotype.", designed_by: 'Eric Gill', inspired_by: 'Johnston')
+
+open_sans = Font.create(font_name: "Open Sans", year_released: 2011, classification: "sans-serif", history: "Open Sans is a sans-serif typeface designed by Steve Matteson and commissioned by Google. According to Google, it was developed with an upright stress, open forms and a neutral, yet friendly appearance and is optimized for legibility across print, web, and mobile interfaces. Its design is almost identical to that of Droid Sans, with the exception of wider characters and the inclusion of italic variants. Whereas Droid Sans is used primarily in the user interfaces of some Android phones, Open Sans is used in some of Google's web pages as well as its print and web advertisements.", designed_by: 'Steve Matteson', inspired_by: '-----')
 
 
 # Combination Objects:
@@ -45,6 +47,12 @@ c3 = Combination.create(name: 'Futura & Times New Roman', description: "Josefin 
 c4 = Combination.create(name: 'Playfair Display & Roboto', description: "Use a heavy version of Playfair Display for the headers, and a light version of Roboto as the body")
 
 c5 = Combination.create(name: 'Playfair Display & Garamond', description: "Use a heavy version of Playfair Display for the headers, and a light version of Garamond as the body")
+
+c6 = Combination.create(name: 'Futura & Roboto', description: "Use an uppercase Futura header and a light Roboto weight for the body")
+
+c7 = Combination.create(name: 'Futura & Merriweather', description: "Use an uppercase Futura header with Merriweather as the body")
+
+c8 = Combination.create(name: 'Bodoni & Open Sans', description: "Use a heavy version of Bodoni for the headers and Open Sans for the body")
 
 
 # Assign fonts to combinations
@@ -60,8 +68,17 @@ c3.fonts << times_new_roman
 c4.fonts << playfair_display
 c4.fonts << roboto
 
-c4.fonts << playfair_display
-c4.fonts << garamond
+c5.fonts << playfair_display
+c5.fonts << garamond
+
+c6.fonts << futura
+c6.fonts << roboto
+
+c7.fonts << futura
+c7.fonts << merriweather
+
+c8.fonts << bodoni
+c8.fonts << open_sans
 
 
 puts "seeded"

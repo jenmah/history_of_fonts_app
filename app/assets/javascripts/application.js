@@ -66,7 +66,7 @@ $(document).ready(function() {
   function editSuggestion() {
     console.log('editSuggestion');
     var editBoxId = $(this).data('id');
-
+    
     $.ajax({
       type: 'GET',
       url: "/suggestions/" + editBoxId + "/edit",

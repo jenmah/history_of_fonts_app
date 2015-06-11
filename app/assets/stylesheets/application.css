@@ -41,10 +41,14 @@
   width: 100%;
   z-index: 1;
   padding: 1% 5%;
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
 }
 
 #grey-nav {
   background-color: rgba(100, 100, 100, 1);
+  /*background-color: white;*/
   height: 40px;
   position: fixed;
   width: 100%;
@@ -60,6 +64,7 @@
 .fa {
   color: rgba(150, 150, 150, 1);
   display: block;
+  margin-bottom: 1%;
 }
 
 a {
