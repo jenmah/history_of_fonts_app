@@ -31,6 +31,7 @@ class SuggestionsController < ApplicationController
 
   def update
     @suggestion = Suggestion.find(params[:id])
+    render json: @suggestion
   end
 
   private

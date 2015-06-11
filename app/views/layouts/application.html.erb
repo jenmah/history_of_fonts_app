@@ -73,8 +73,12 @@
       <p><%= link_to 'Roboto', path_font_for('Roboto') %> is added to Google Fonts</p>
     </li>
     <li>
-      <div class="timeline__date">1957:</div>
+      <div class="timeline__date">2011:</div>
       <p>Google commissions the creation of <%= link_to 'Open Sans', path_font_for('Open Sans') %></p>
+    </li>
+    <li>
+     <div class="timeline__date">2014:</div>
+      <p><%= link_to 'Josefin Sans', path_font_for('Josefin Sans') %> is released</p>
     </li>
   </ul>
 </section>
@@ -86,9 +90,11 @@
 
   <div id="right-side">
     <div id="grey-nav">
+      <div id="search-in-nav">
       <form class="font_search" id="font_search" action="/search" accept-charset="UTF-8" method="get">
         <input type="search" name="q[font_name]" id="q_font_name" />
         <input id="nav-search" type="submit" name="commit" value="SEARCH"/>
+        </div>
       </form>
     </div>
     

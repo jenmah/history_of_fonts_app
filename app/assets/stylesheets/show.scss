@@ -47,8 +47,7 @@ h5 {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-style: italic;
-  display: inline-block;
-    z-index: 1;
+  z-index: -1;
 }
 
 #font-information {
@@ -56,6 +55,7 @@ h5 {
   display: inline-block;
   z-index: 3;
   text-align: left;
+  margin: 0 0 0 0;
 }
 
 #font-information-one {
@@ -76,10 +76,29 @@ h5 {
   background-color: rgba(120, 120, 120, 1);
   color: white;
   width: 100%;
-  height: 290px;
+  height: 170px;
 }
 
 hr {
   height: 7px;
   background-color: rgba(120, 120, 120, 1);
+}
+
+#three-box-information {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  margin-top: 9%;
+  margin-bottom: 9%;
+}
+
+.three-box {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 5%;
+}
+
+#characters-symbols {
+  margin-top: 2%;
+  text-align: center;
 }

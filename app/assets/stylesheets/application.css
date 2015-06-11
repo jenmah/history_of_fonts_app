@@ -53,6 +53,7 @@
   position: fixed;
   width: 100%;
   z-index: 1;
+  padding: 1% 5%;
 }
 
 #back-to-top {
@@ -69,6 +70,10 @@
 
 a {
   text-decoration: none;
+}
+
+a:visited{
+  color: rgba(50, 50, 50, 1);
 }
 
 li {
@@ -88,4 +93,10 @@ li {
   color: white;
   font-family: 'Raleway';
   font-size: 15px;
+}
+
+#search-in-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
 }

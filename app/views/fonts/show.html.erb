@@ -4,33 +4,43 @@
     <h3><span style="font-family: '<%= @font.font_name %>';"><%= @font.font_name %></span></h3>
     <h2><%= @font.classification %></h2>
     <p><span style="font-family: '<%= @font.font_name %>';"><%= @font.history %></span></p>
-    <h5>fonts</h5>
+    <!-- <h5>fonts</h5> -->
   </div>
 
-  <div id="capital-box">
-      <!-- <h5>fonts</h5> -->
+</div>
+
+<div id="three-box-information">
+  <div class="three-box">
+    <h2>YEAR RELEASED</h2>
+    <span style="font-family: '<%= @font.font_name %>';"><%= @font.year_released %></span>
   </div>
+
+  <div class="three-box">
+    <h2>DESIGNED BY</h2>
+    <span style="font-family: '<%= @font.font_name %>';"><%= @font.designed_by %></span>
+  </div>
+
+  <div class="three-box">
+    <h2>INSPIRED BY</h2>
+    <span style="font-family: '<%= @font.font_name %>';"><%= @font.inspired_by %></span>
+  </div>
+
 </div>
 
 
-<h2>YEAR RELEASED</h2>
-  <span style="font-family: '<%= @font.font_name %>';"><%= @font.year_released %></span>
-
-<h2>DESIGNED BY</h2>
-  <span style="font-family: '<%= @font.font_name %>';"><%= @font.designed_by %></span>
-
-<h2>INSPIRED BY</h2>
-  <span style="font-family: '<%= @font.font_name %>';"><%= @font.inspired_by %></span>
+  <div id="characters-symbols">
+    <h2>CHARACTERS & SYMBOLS</h2>
+    <span style="font-family: '<%= @font.font_name %>';">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</span>
+    <span style="font-family: '<%= @font.font_name %>';">a b c d e f g h i j k l m n o p q r s t u v</span>
+    <span style="font-family: '<%= @font.font_name %>';">! @ # $ % ^ & * ( ) _ + =</span>
+  </div>
 
 
 <div id="grey-box">
-  <span style="font-family: '<%= @font.font_name %>';">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</span>
-  <span style="font-family: '<%= @font.font_name %>';">a b c d e f g h i j k l m n o p q r s t u v</span>
-  <span style="font-family: '<%= @font.font_name %>';">! @ # $ % ^ & * ( ) _ + =</span>
+</div>
 
   <h2>try it out yourself. type whatever you want below</h2>
   <input class="test" type="text" placeholder="the quick brown fox jumps over the lazy dog"></input>
-</div>
 
 
 <div class="combination-cards">
@@ -48,7 +58,6 @@
 
     </div>
   <% end %>
-
 
 </div><!-- closes combination-cards div -->
 

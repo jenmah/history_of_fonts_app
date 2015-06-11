@@ -66,11 +66,15 @@ $(document).ready(function() {
   function editSuggestion() {
     console.log('editSuggestion');
     var editBoxId = $(this).data('id');
-    
+
+    $('#suggested-font').val("testing");
+    $('#suggestion-reason').val("testing");
+
     $.ajax({
       type: 'GET',
       url: "/suggestions/" + editBoxId + "/edit",
-      dataType: 'json'
+      dataType: 'json',
+      data: {id: editBoxId}
     }).done(function(data) {
       debugger;
     })
