@@ -94,7 +94,7 @@ li {
   color: white;
   font-family: 'Raleway';
   font-size: 14px;
-  width: 75%;
+  width: 65%;
 }
 
 #nav-search {
@@ -111,4 +111,5 @@ li {
   position: fixed;
   top: 0;
   right: 0;
+  width: 35%;
 }

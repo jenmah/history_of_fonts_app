@@ -26,7 +26,7 @@ $(document).ready(function() {
     console.log(suggestedFont);
     console.log(suggestionReason);
 
-    $('#suggestions-list').prepend("Thanks! Your font suggestion has been added to our database.");
+    $('#suggestions-list').prepend('<p>' + "Thanks! Your suggestion has been added to our database." + '</p>');
 
     $.ajax({
       type: 'POST',
@@ -39,7 +39,7 @@ $(document).ready(function() {
     }).done(function(suggestion) {
       var id = suggestion["id"];
 
-      $('#suggestions-list').prepend(suggestion['suggested_font'] +  '  |  ' + suggestion['reason'] + '<button class="edit-suggestion-box" data-id="' + id + '">' + 'EDIT' + '</button>' + '<button class="delete-suggestion-box" data-id="' + id + '">' + 'DELETE' + '</button>');
+      $('#suggestions-list').prepend('<h4>' + suggestion['suggested_font'] + '</h4>' + '<button class="edit-suggestion-box" data-id="' + id + '">' + 'EDIT' + '</button>' + '<button class="delete-suggestion-box" data-id="' + id + '">' + 'DELETE' + '</button>');
 
       console.log(suggestion.suggested_font);
       $('#suggested-font').val('');
@@ -58,7 +58,7 @@ $(document).ready(function() {
       url: "/suggestions/" + deleteBoxId
     }).done(function(data) {
       console.log('done', deleteBox);
-      $('#suggestions-list').html('Changed your mind? Your suggestion has been deleted from the database.');
+      $('#suggestions-list').html('<p>' + 'Changed your mind? Your suggestion has been deleted from the database.' + '</p>');
     })
   }
 
@@ -70,7 +70,7 @@ $(document).ready(function() {
     $('#suggested-font').val("testing");
     $('#suggestion-reason').val("testing");
 
-    $('#suggestions-list').html('Edit your suggestion above');
+    $('#suggestions-list').html('<h4>' + 'Edit your suggestion above' + '</h4>');
 
     $.ajax({
       type: 'GET',
@@ -78,9 +78,8 @@ $(document).ready(function() {
       dataType: 'json',
       data: {id: editBoxId}
     }).done(function(data) {
-      debugger;
+      console.log(data);
     })
-
   }
 
   $('#submit-suggestion').on('click', addSuggestion);
@@ -93,8 +92,6 @@ $(document).ready(function() {
      $("#left-side").animate({ scrollTop: 0 }, "slow");
      return false;
   });
-
-  
 
 });
 

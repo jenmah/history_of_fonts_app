@@ -20,11 +20,6 @@
   }
 }
 
-input:focus {
-  outline: none;
-}
-
-
 
 #navigation-container {
     width:100%;
@@ -33,4 +28,9 @@ input:focus {
     background: inherit;
     background-color: #404040;
     padding-top: 1%;
+}
+
+a {
+  font-weight: bold;
+  color: rgba(50, 50, 50, 1);
 }
