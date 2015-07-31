@@ -157,3 +157,11 @@ hr {
 #combo-card span {
   display: inline-block;
 }
+
+
+.typography-image {
+  background-size: cover;
+  overflow: hidden; 
+  width: 100%;
+  max-height: 100vh;
+}
